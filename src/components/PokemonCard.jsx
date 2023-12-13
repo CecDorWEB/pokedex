@@ -1,4 +1,5 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+import { useState } from "react";
 
 function PokemonCard(props) {
   const {pokemon} = props;
