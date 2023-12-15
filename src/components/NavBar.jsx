@@ -12,6 +12,9 @@ function NavBar ({setPokemonIndex, pokemonIndex, pokemonList}) {
 
     const handleButton = (index) => {
       setPokemonIndex(index);
+      if (index==3) {
+        alert("pika pikachu !!!");
+      }
     }
     
         return (
@@ -23,9 +26,9 @@ function NavBar ({setPokemonIndex, pokemonIndex, pokemonList}) {
                   </button>
               ))}
             </div>*/
-            <div>
+            <div >
               {pokemonList.map((pokemon, index)=>(
-                <button 
+                <button className="pokeButton"
                 key={pokemon.name} 
                 onClick={() => handleButton(index)}>
                   {pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</button>

@@ -4,9 +4,9 @@ function PokemonCard(props) {
   const {pokemon} = props;
 
     return (
-    <figure>
+    <figure className="card">
       {pokemon.imgSrc !== undefined ? <img src={pokemon.imgSrc}></img> : <p>???</p>}
-      <figcaption>{pokemon.name}</figcaption>
+      <figcaption>{pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</figcaption>
     </figure>
     )
   }
